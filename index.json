@@ -1,0 +1,6 @@
+{
+    "name": "yearn.vault.schema.json",
+    "description": "yearn vault schema list",
+    "fileMatch": ["schema.json", ".yfi.json"],
+    "url": "https://yearn.finance/vault.schema.json"
+}

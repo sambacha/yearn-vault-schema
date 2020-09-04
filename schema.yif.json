@@ -1,0 +1,212 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://yearn.finance/vault.schema.json",
+    "title": "YFI Vault List Schema",
+    "description": "Schema for YFI Vaults",
+    "definitions": {
+        "Version": {
+            "type": "object",
+            "description": "The version of the vault list, used in change detection",
+            "examples": [
+                {
+                    "major": 1,
+                    "minor": 0,
+                    "patch": 0
+                }
+            ],
+            "additionalProperties": false,
+            "properties": {
+                "major": {
+                    "type": "integer",
+                    "description": "The major version of the list. Must be incremented when vaults are removed from the list or token addresses are changed.",
+                    "minimum": 0,
+                    "examples": [1, 2]
+                },
+                "minor": {
+                    "type": "integer",
+                    "description": "The minor version of the list. Must be incremented when vaults are added to the list.",
+                    "minimum": 0,
+                    "examples": [0, 1]
+                },
+                "patch": {
+                    "type": "integer",
+                    "description": "The patch version of the list. Must be incremented for any changes to the list.",
+                    "minimum": 0,
+                    "examples": [0, 1]
+                }
+            },
+            "required": ["major", "minor", "patch"]
+        }
+    },
+    "ChainInfo": {
+        "type": "object",
+        "description": "Metadata for Chain Information",
+        "additionalProperties": false,
+        "properties": {
+            "chainId": {
+                "type": "integer",
+                "description": "The chain ID of the Ethereum network where this token is deployed",
+                "minimum": 1,
+                "examples": [1, 42]
+            },
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "erc20Name": {
+                    "type": "string",
+                    "description": "The name of the token",
+                    "minLength": 1,
+                    "maxLength": 40,
+                    "pattern": "^[ \\w.'+\\-%/À-ÖØ-öø-ÿ]+$"
+                },
+                "erc20Symbol": {
+                    "type": "string",
+                    "description": "The symbol for the token; must be alphanumeric",
+                    "pattern": "^[a-zA-Z0-9+\\-%/]+$"
+                },
+                "vaultDescription": {
+                    "type": "string"
+                },
+                "vaultSymbol": {
+                    "type": "string",
+                    "description": "The symbol for the vault; must be alphanumeric",
+                    "pattern": "^[a-zA-Z0-9+\\-%/]+$"
+                },
+                "erc20Address": {
+                    "type": "string",
+                    "description": "The checksummed address of the contract address for the erc20asset on the specified chain ID",
+                    "pattern": "^0x[a-fA-F0-9]{40}$"
+                },
+                "vaultContractAddress": {
+                    "type": "string",
+                    "description": "The checksummed address of the contract address for the specified vault on the specified chain ID",
+                    "pattern": "^0x[a-fA-F0-9]{40}$"
+                },
+                "vaultContractABI": {
+                    "type": "string"
+                },
+                "balance": {
+                    "type": "integer"
+                },
+                "vaultBalance": {
+                    "type": "integer"
+                },
+                "decimals": {
+                    "type": "integer"
+                },
+                "deposit": {
+                    "type": "boolean"
+                },
+                "depositAll": {
+                    "type": "boolean"
+                },
+                "withdraw": {
+                    "type": "boolean"
+                },
+                "withdrawAll": {
+                    "type": "boolean"
+                },
+                "lastMeasurement": {
+                    "type": "integer"
+                },
+                "measurement": {
+                    "type": "integer"
+                }
+            },
+            "tags": {
+                "type": "array",
+                "description": "An array of tag identifiers associated with the vault; tags are defined at the list level",
+                "items": {
+                    "$ref": "#/definitions/TagIdentifier"
+                },
+                "maxLength": 18,
+                "examples": ["vault", "aave"]
+            }
+        }
+    },
+    "VaultList": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "name": {
+                "type": "string",
+                "description": "The name of the vault and/or list",
+                "minLength": 1,
+                "maxLength": 20,
+                "pattern": "^[\\w ]+$",
+                "examples": ["yETH"]
+            },
+            "timestamp": {
+                "type": "string",
+                "format": "date-time",
+                "description": "The timestamp of this list version; i.e. when this immutable version of the list was created as defined by standard UNIX Epoch time"
+            },
+            "version": {
+                "$ref": "#/definitions/Version"
+            },
+            "tokens": {
+                "type": "array",
+                "description": "The list of tokens included in the list of vaults",
+                "items": {
+                    "$ref": "#/definitions/TokenInfo"
+                },
+                "minItems": 1,
+                "maxItems": 1000
+            },
+            "keywords": {
+                "type": "array",
+                "description": "Keywords associated with the contents of the vault; may be used in list discoverability",
+                "items": {
+                    "type": "string",
+                    "description": "A keyword to describe the contents of the vault",
+                    "minLength": 1,
+                    "maxLength": 20,
+                    "pattern": "^[\\w ]+$",
+                    "examples": ["aave", "lending", "personal tokens"]
+                },
+                "maxItems": 20,
+                "uniqueItems": true
+            },
+            "tags": {
+                "type": "object",
+                "description": "A mapping of tag identifiers to their name and description",
+                "pattern": "^[ \\w]+$",
+                "propertyNames": {
+                    "$ref": "#/definitions/TagIdentifier"
+                },
+                "additionalProperties": {
+                    "$ref": "#/definitions/TagDefinition"
+                },
+                "maxProperties": 20,
+                "examples": [
+                    {
+                        "stablecoin": {
+                            "name": "Stablecoin",
+                            "description": "A token with value pegged to another asset"
+                        }
+                    }
+                ]
+            }
+        },
+        "required": [
+            "id",
+            "name",
+            "symbol",
+            "description",
+            "vaultSymbol",
+            "erc20address",
+            "vaultContractAddress",
+            "vaultContractABI",
+            "balance",
+            "vaultBalance",
+            "decimals",
+            "deposit",
+            "depositAll",
+            "withdraw",
+            "withdrawAll",
+            "lastMeasurement",
+            "measurement"
+        ]
+    }
+}

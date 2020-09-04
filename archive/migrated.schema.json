@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "symbol": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "vaultSymbol": {
+            "type": "string"
+        },
+        "erc20address": {
+            "type": "string"
+        },
+        "vaultContractAddress": {
+            "type": "string"
+        },
+        "vaultContractABI": {
+            "type": "string"
+        },
+        "balance": {
+            "type": "integer"
+        },
+        "vaultBalance": {
+            "type": "integer"
+        },
+        "decimals": {
+            "type": "integer"
+        },
+        "deposit": {
+            "type": "boolean"
+        },
+        "depositAll": {
+            "type": "boolean"
+        },
+        "withdraw": {
+            "type": "boolean"
+        },
+        "withdrawAll": {
+            "type": "boolean"
+        },
+        "lastMeasurement": {
+            "type": "integer"
+        },
+        "measurement": {
+            "type": "integer"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "symbol",
+        "description",
+        "vaultSymbol",
+        "erc20address",
+        "vaultContractAddress",
+        "vaultContractABI",
+        "balance",
+        "vaultBalance",
+        "decimals",
+        "deposit",
+        "depositAll",
+        "withdraw",
+        "withdrawAll",
+        "lastMeasurement",
+        "measurement"
+    ]
+}
