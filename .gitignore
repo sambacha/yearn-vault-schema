@@ -1,1 +1,10 @@
+.tar.gz
+*.tar.gz
+*.zip
+*.tgz
+*.tar.lz
+*.tar
+.DS_Store
+build/
+dist/
 node_modules
