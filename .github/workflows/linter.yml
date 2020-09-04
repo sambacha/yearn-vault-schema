@@ -50,3 +50,9 @@ jobs:
                   VALIDATE_ALL_CODEBASE: false
                   DEFAULT_BRANCH: master
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            ################################
+            # Run Series CI KPI  Script    #
+            ################################
+            - name: Exec Series-CI
+              run: |
+                sh ./.series-ci.sh
