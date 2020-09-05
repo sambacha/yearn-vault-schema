@@ -1,12 +1,13 @@
 {
     "name": "yearn-json-schema",
-    "version": "0.1.0",
+    "version": "0.2.1",
     "description": "Schema for YFI Vaults from iearn.finance",
-    "main": "index.json",
+    "main": "src/index.json",
     "scripts": {
-        "test": "ajv compile -s schema.yif.json",
+        "test": "ajv compile -s src/schema.yif.json",
         "release": "npx release-it",
-        "changelog": "npx auto-changelog"
+        "changelog": "npx auto-changelog",
+        "schema-version": "cat schema.version"
     },
     "keywords": [
         "yearn",
