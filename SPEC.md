@@ -2,6 +2,11 @@
 
 This document is intended to detail the `+dev` version of the schema. It is used to document changes between versions along with record design decisions, etc.
 
+## TODO
+
+* create: array of function hashes associated with vault
+where hex string e.g: `0xa68027f2`
+
 ## +dev Changes
 
 > `+dev` refers to the `semver` option after the patch identifier so that there is not changes in the `0.0.x` portion of versioning
