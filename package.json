@@ -1,6 +1,6 @@
 {
     "name": "yearn-json-schema",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Schema for YFI Vaults from iearn.finance",
     "main": "src/index.json",
     "scripts": {
