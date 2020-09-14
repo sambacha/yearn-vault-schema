@@ -1,0 +1,17 @@
+{
+  "YearnFeeRewards": {
+    "breaker": "bool",
+    "minimum": "uint",
+    "config": "bool",
+    "governance": "address",
+    "yCRV": "IERC20",
+    "yGov": "YearnGovernance",
+    "DURATION": "uint256",
+    "periodFinish": "uint256",
+    "rewardRate": "uint256",
+    "lastUpdateTime": "uint256",
+    "rewardPerTokenStored": "uint256",
+    "userRewardPerTokenPaid": "mapping(address=>uint256)",
+    "rewards": "mapping(address=>uint256)"
+  }
+}

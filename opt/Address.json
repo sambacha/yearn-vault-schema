@@ -1,0 +1,11 @@
+{ "Library": {
+Address
+Internal:
+  "isContract":
+  "account": { "address": "bool",
+  "toPayable":
+  "account":
+    { "address": ["(payable: address)"]},
+  "sendValue": "recipient": {["address":  "amount", "uint256"]
+  },
+

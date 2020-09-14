@@ -1,0 +1,286 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "yVault": {
+      "type": "object",
+      "properties": {
+        "balanceOf": {
+          "type": "object",
+          "properties": {
+            "constant": {
+              "type": "boolean"
+            },
+            "inputs": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "type"]
+                }
+              ]
+            },
+            "name": {
+              "type": "string"
+            },
+            "outputs": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "type"]
+                }
+              ]
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": ["constant", "inputs", "name", "outputs", "type"]
+        },
+        "_totalSupply": {
+          "type": "object",
+          "properties": {
+            "constant": {
+              "type": "boolean"
+            },
+            "inputs": {
+              "type": "array",
+              "items": {}
+            },
+            "name": {
+              "type": "string"
+            },
+            "outputs": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "type"]
+                }
+              ]
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": ["constant", "inputs", "name", "outputs", "type"]
+        },
+        "_balanceToken": {
+          "type": "object",
+          "properties": {
+            "constant": {
+              "type": "boolean"
+            },
+            "inputs": {
+              "type": "array",
+              "items": {}
+            },
+            "name": {
+              "type": "string"
+            },
+            "outputs": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "type"]
+                }
+              ]
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": ["constant", "inputs", "name", "outputs", "type"]
+        },
+        "_balanceVault": {
+          "type": "object",
+          "properties": {
+            "constant": {
+              "type": "boolean"
+            },
+            "inputs": {
+              "type": "array",
+              "items": {}
+            },
+            "name": {
+              "type": "string"
+            },
+            "outputs": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "type"]
+                }
+              ]
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": ["constant", "inputs", "name", "outputs", "type"]
+        },
+        "_balanceProfits": {
+          "type": "object",
+          "properties": {
+            "constant": {
+              "type": "boolean"
+            },
+            "inputs": {
+              "type": "array",
+              "items": {}
+            },
+            "name": {
+              "type": "string"
+            },
+            "outputs": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "type"]
+                }
+              ]
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": ["constant", "inputs", "name", "outputs", "type"]
+        },
+        "_deposit": {
+          "type": "object",
+          "properties": {
+            "constant": {
+              "type": "boolean"
+            },
+            "inputs": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "type"]
+                }
+              ]
+            },
+            "name": {
+              "type": "string"
+            },
+            "outputs": {
+              "type": "array",
+              "items": {}
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": ["constant", "inputs", "name", "outputs", "type"]
+        },
+        "_withdraw": {
+          "type": "object",
+          "properties": {
+            "constant": {
+              "type": "boolean"
+            },
+            "inputs": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["name", "type"]
+                }
+              ]
+            },
+            "name": {
+              "type": "string"
+            },
+            "outputs": {
+              "type": "array",
+              "items": {}
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "required": ["constant", "inputs", "name", "outputs", "type"]
+        }
+      },
+      "required": [
+        "balanceOf",
+        "_totalSupply",
+        "_balanceToken",
+        "_balanceVault",
+        "_balanceProfits",
+        "_deposit",
+        "_withdraw"
+      ]
+    }
+  },
+  "required": ["yVault"]
+}

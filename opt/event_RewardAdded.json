@@ -1,0 +1,8 @@
+{
+  "type": "array",
+  "_event": {
+    "name": "RewardAdded",
+    "description": "Reward Added Event",
+    "event_mapping": ["reward", "unit256"]
+  }
+}

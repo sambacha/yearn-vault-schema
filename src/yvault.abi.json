@@ -1,0 +1,53 @@
+{
+  "yVault": {
+    "balanceOf": {
+      "constant": true,
+      "inputs": [{ "name": "_owner", "type": "address" }],
+      "name": "balanceOf",
+      "outputs": [{ "name": "balance", "type": "uint256" }],
+      "type": "function"
+    },
+    "_totalSupply": {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [{ "name": "balance", "type": "uint256" }],
+      "type": "function"
+    },
+    "_balanceToken": {
+      "constant": true,
+      "inputs": [],
+      "name": "balanceToken",
+      "outputs": [{ "name": "balance", "type": "uint256" }],
+      "type": "function"
+    },
+    "_balanceVault": {
+      "constant": true,
+      "inputs": [],
+      "name": "balanceVault",
+      "outputs": [{ "name": "balance", "type": "uint256" }],
+      "type": "function"
+    },
+    "_balanceProfits": {
+      "constant": true,
+      "inputs": [],
+      "name": "balanceProfits",
+      "outputs": [{ "name": "balance", "type": "uint256" }],
+      "type": "function"
+    },
+    "_deposit": {
+      "constant": true,
+      "inputs": [{ "name": "amount", "type": "uint256" }],
+      "name": "deposit",
+      "outputs": [],
+      "type": "function"
+    },
+    "_withdraw": {
+      "constant": true,
+      "inputs": [{ "name": "numberOfShares", "type": "uint256" }],
+      "name": "withdraw",
+      "outputs": [],
+      "type": "function"
+    }
+  }
+}

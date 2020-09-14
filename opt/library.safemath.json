@@ -1,0 +1,16 @@
+{
+  "SafeMath": "Internal",
+  "Library": {
+    "add": ["uint256", "uint256", "uint256"],
+    "sub": ["uint256", "uint256", "uint256"],
+    "SafeMath_sub": ["uint256", "uint256"],
+    "sub_errorMessage": ["string", "uint256"],
+    "mul": ["uint256", "uint256", "uint256"],
+    "SafeMath_div": ["uint256", "uint256", "uint256"],
+    "div": ["uint256", "uint256"],
+    "div_errorMessage": ["string", "uint256"],
+    "mod": ["uint256", "uint256", "uint256"],
+    "SafeMath_mod": ["uint256", "uint256"],
+    "mod_errorMessage": ["string", "uint256"]
+  }
+}

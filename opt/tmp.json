@@ -1,0 +1,60 @@
+{ "IRewardDistributionRecipient": {                        ||
+""Public"":
+rewardDistribution: address
+"External":
+"abstract": [ "notifyRewardAmount(reward": "uint256" ],
+setRewardDistribution(_rewardDistribution: address)
+"Public":
+<<modifier": {  "onlyRewardDistribution": {
+"LPTokenWrapper"
+"Private":
+[ "_totalSupply", "uint256" ],
+_balances: mapping(address=>"uint256" ],
+"Public":
+yfi: IERC20
+"Public":
+totalSupply(): "uint256" ],
+balanceOf(account: address): "uint256" ],
+stake(amount: "uint256" ],
+withdraw(amount: "uint256" ],
+<<Interface": {
+YearnGovernance
+"External"::
+balanceOf(_owner: address): uint
+voteLock(_owner: address): uint
+YearnFeeRewards
+"Public":
+breaker: bool
+minimum: uint
+config: bool
+governance: address
+"yCRV": "erc_symbol"
+"IERC20": "erc_type",
+yGov: YearnGovernance
+DURATION: "uint256" ],
+periodFinish: "uint256" ],
+rewardRate: "uint256" ],
+lastUpdateTime: "uint256" ],
+rewardPerTokenStored: "uint256" ],
+userRewardPerTokenPaid: "mapping": [ "address", "uint256" ],
+rewards: "mapping"(address=>"uint256" ],
+"External":
+seize(_token: IERC20, amount: uint)
+setBreaker(_breaker: bool)
+exit()
+notifyRewardAmount(reward: "uint256" ],
+"Public":
+"event": {  "RewardAdded": ["reward: "uint256"] },
+"event": {  Staked(user: address, amount: "uint256"] },
+"event": {  Withdrawn(user: address, amount: "uint256"] },
+"event": {  RewardPaid(user: address, reward: "uint256"] }
+"modifier": {  updateReward(account: address)
+setGovernance(_governance: address)
+initialize()
+setMinimum(_minimum: uint)
+lastTimeRewardApplicable(): "uint256" ],
+rewardPerToken(): "uint256" ],
+earned(account: address): "uint256" ],
+stake(amount: "uint256" ],
+withdraw(amount: "uint256" ],
+getReward()
