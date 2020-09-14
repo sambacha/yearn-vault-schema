@@ -1,0 +1,28 @@
+{    "YDefinitions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "_balanceOf": {
+          "$ref": "#/definitions/BalanceOf"
+        },
+        "_totalSupply": {
+          "$ref": "#/definitions/TotalSupply"
+        },
+        "_balanceToken": {
+          "$ref": "#/definitions/BalanceToken"
+        },
+        "_balanceVault": {
+          "$ref": "#/definitions/BalanceVault"
+        },
+        "_balanceProfits": {
+          "$ref": "#/definitions/BalanceProfits"
+        },
+        "_deposit": {
+          "$ref": "#/definitions/Deposit"
+        },
+        "_withdraw": {
+          "$ref": "#/definitions/Withdraw"
+        }
+      }
+    }
+  }
