@@ -1,0 +1,15 @@
+{
+  "Library": "Address",
+  "Internal": {
+    "isContract": "account",
+    "_solidity": {
+      "account": ["address", "bool"]
+    }
+  },
+  "toPayable": "account",
+  "_address": ["payable", "address"],
+  "sendValue": "recipient",
+  "_solidity": {
+    "address": ["amount", "uint256"]
+  }
+}

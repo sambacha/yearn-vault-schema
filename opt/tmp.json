@@ -1,29 +1,29 @@
 { "IRewardDistributionRecipient": {                        ||
-""Public"": 
+""Public"":
 rewardDistribution: address
 "External":
 "abstract": [ "notifyRewardAmount(reward": "uint256" ],
 setRewardDistribution(_rewardDistribution: address)
-"Public": 
+"Public":
 <<modifier": {  "onlyRewardDistribution": {
 "LPTokenWrapper"
 "Private":
 [ "_totalSupply", "uint256" ],
 _balances: mapping(address=>"uint256" ],
-"Public": 
+"Public":
 yfi: IERC20
-"Public": 
+"Public":
 totalSupply(): "uint256" ],
 balanceOf(account: address): "uint256" ],
 stake(amount: "uint256" ],
 withdraw(amount: "uint256" ],
-<<Interface": { 
+<<Interface": {
 YearnGovernance
 "External"::
 balanceOf(_owner: address): uint
 voteLock(_owner: address): uint
 YearnFeeRewards
-"Public": 
+"Public":
 breaker: bool
 minimum: uint
 config: bool
@@ -43,7 +43,7 @@ seize(_token: IERC20, amount: uint)
 setBreaker(_breaker: bool)
 exit()
 notifyRewardAmount(reward: "uint256" ],
-"Public": 
+"Public":
 "event": {  "RewardAdded": ["reward: "uint256"] },
 "event": {  Staked(user: address, amount: "uint256"] },
 "event": {  Withdrawn(user: address, amount: "uint256"] },
