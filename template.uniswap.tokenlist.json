@@ -1,0 +1,27 @@
+{
+  "name": "%ContractName",
+  "logoURI": "%URI_LOGO",
+  "timestamp": "2020-08-28T00:00:00+00:00",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "keywords": ["%SEO", "%Keywords", "%GraphQL", "%Parse"],
+  "tags": {
+    "%tokenname_lowercase": {
+      "name": "%Name",
+      "description": "%Description"
+    }
+  },
+  "tokens": [
+    {
+      "chainId": 1,
+      "address": "0xCHECKSUMEDaddress",
+      "symbol": "%ERC_SYMBOL",
+      "name": "%Contract_Name",
+      "decimals": 18,
+      "logoURI": "%LOGO_URI"
+    }
+  ]
+}
