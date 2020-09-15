@@ -1,0 +1,45 @@
+{
+  "$schema": "https://conventions.0xcert.org/xcert-schema.json",
+  "description": "YFInsurance Schema Alpha",
+  "properties": {
+    "$insurance": {
+      "description": "YFInsurance",
+      "type": "string"
+    },
+    "$schema": {
+      "description": "JSON Schema",
+      "type": "string"
+    },
+    "created": {
+      "description": "Created",
+      "type": "string"
+    },
+    "description": {
+      "description": "Description",
+      "type": "string"
+    },
+    "id": {
+      "description": "ID",
+      "type": "string"
+    },
+    "policy": {
+      "description": "Insurance Policy",
+      "type": "string"
+    },
+    "term": {
+      "description": "term length",
+      "type": "string"
+    },
+    "name": {
+      "description": "Name",
+      "type": "string"
+    },
+    "size": {
+      "description": "Size",
+      "type": "string"
+    }
+  },
+  "required": ["$schema", "description", "id", "policy", "term"],
+  "title": "YFInsurance",
+  "type": "object"
+}
