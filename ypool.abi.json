@@ -1,0 +1,47 @@
+{ "yPool": 
+	{
+
+    "balanceOf": {
+    "constant":true,
+    "inputs":[{"name":"_owner","type":"address"}],
+    "name":"balanceOf",
+    "outputs":[{"name":"balance","type":"uint256"}],
+    "type":"function"
+},
+"_totalSupply": {
+    "constant":true,
+    "inputs":[{"name":"_account","type":"address"}],
+    "name":"earned",
+    "outputs":[{"name":"balance","type":"uint256"}],
+    "type":"function"
+	},
+	"_balanceToken": {
+    "constant":true,
+    "inputs":[],
+    "name":"getReward",
+    "outputs":[],
+    "type":"function"
+	},
+	"_balanceVault": {
+    "constant":true,
+    "inputs":[],
+    "name":"exit",
+    "outputs":[],
+    "type":"function"
+	},
+	"_balanceProfits": {
+    "constant":true,
+    "inputs":[{"name":"amount","type":"uint256"}],
+    "name":"stake",
+    "outputs":[],
+    "type":"function"
+	},
+	"_deposit": {
+    "constant":true,
+    "inputs":[{"name":"numberOfShares","type":"uint256"}],
+    "name":"withdraw",
+    "outputs":[],
+    "type":"function"
+}
+	}
+}
